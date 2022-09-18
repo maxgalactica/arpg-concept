@@ -113,11 +113,11 @@ public class MouseMovement : CharacterBase
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.green;
-        Gizmos.DrawRay(transform.position, _finalMovePoint);
+        Gizmos.DrawLine(transform.position, _finalMovePoint);
         Gizmos.DrawWireSphere(_finalMovePoint, 0.25f);
 
         Gizmos.color = Color.red;
-        Gizmos.DrawRay(_finalMovePoint, _wishMovePoint);
+        Gizmos.DrawLine(_finalMovePoint, _wishMovePoint);
         Gizmos.DrawWireSphere(_wishMovePoint, 0.25f);
     }
 }
